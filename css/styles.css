@@ -94,8 +94,7 @@ svg {
   display: flex;
   gap: 40px;
 }
-.header-menu-item {
-}
+
 .header-menu-link:hover {
   color: var(--OCEAN, #404bbf);
 }
@@ -144,8 +143,7 @@ svg {
   margin-right: auto;
   gap: 40px;
 }
-.header-address-item {
-}
+
 .header-aaddress-link:hover {
   color: var(--OCEAN, #404bbf);
 }
@@ -163,23 +161,19 @@ svg {
   padding: 24px 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.mobile-menu-icon-link {
-}
+
 /* Hero */
 
-.hero-container {
-}
-
 @media screen and (min-resolution: 2dppx) {
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/hero-mob-2x.jpg);
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-mob-2x.jpg);
+  }
 }
 
-.main {
-}
 .hero {
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -238,8 +232,6 @@ svg {
   flex-wrap: wrap;
   flex-direction: column;
 }
-.modal-container {
-}
 
 .modal-input-container {
   position: relative;
@@ -280,8 +272,6 @@ svg {
 .form-container {
   margin-bottom: 8px;
 }
-.privacy-check {
-}
 
 .policy-container {
   position: relative;
@@ -293,9 +283,9 @@ svg {
 }
 
 .backdrop {
+  position: fixed;
   width: 100%;
   height: 100%;
-  position: fixed;
   top: 0;
   left: 0;
   background-color: rgba(46, 47, 66, 0.4);
@@ -304,11 +294,13 @@ svg {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
+
 .modal {
   position: absolute;
   width: 408px;
@@ -368,9 +360,6 @@ svg {
   margin-bottom: 16px;
 }
 
-.title-container {
-}
-
 .send-btn {
   display: block;
   color: var(--WHITE, #fff);
@@ -416,12 +405,18 @@ svg {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox-name {
+.policy-container {
+  display: flex;
+  align-items: center;
+}
+
+.policy-check-text {
   color: var(--LIGHT-SLATE, #8e8f99);
   font-size: 12px;
   font-weight: 400;
   line-height: 1.17;
   letter-spacing: 0.04em;
+  align-items: center;
 }
 
 .policy-link {
@@ -461,8 +456,6 @@ svg {
   padding: 96px 16px;
 }
 
-.advantages-container {
-}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -514,9 +507,6 @@ svg {
   border: 1px solid #8e8f99;
   border-radius: 4px;
   height: 112px;
-}
-
-.advantage-icon {
 }
 
 /* Team */
@@ -872,11 +862,6 @@ svg {
   margin-left: 16px;
 }
 
-.checkbox-name {
-  display: flex;
-  align-items: center;
-}
-
 /* Mobile */
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .header-menu-list {
@@ -901,11 +886,6 @@ svg {
     flex-shrink: 0;
   }
 
-  .policy-items {
-  }
-
-  .policy-link {
-  }
   /* Mobile menu */
 
   .mob-menu {
@@ -959,8 +939,7 @@ svg {
   .menu-nav-item:not(:last-child) {
     margin-bottom: 40px;
   }
-  .address-menu-list {
-  }
+
   .address-menu-item:not(:last-child) {
     margin-bottom: 24px;
   }
@@ -990,16 +969,11 @@ svg {
     color: var(--OCEAN, #404bbf);
   }
 
-  .icon-menu-container {
-  }
   .soc-menu-list {
     display: flex;
     gap: 40px;
   }
-  .soc-menu-item {
-  }
-  .mob-menu-icon {
-  }
+
   .mob-icon-link {
     background-color: #4d5ae5;
     width: 100%;
@@ -1071,11 +1045,13 @@ svg {
     background-size: cover;
   }
   @media screen and (min-resolution: 2dppx) {
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url(../images/hero-tab-2x.jpg);
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero-tab-2x.jpg);
+    }
   }
 
   .hero-title {
@@ -1183,9 +1159,6 @@ svg {
   .footer-form {
     flex-direction: row;
   }
-
-  .modal-footer-title {
-  }
 }
 
 /* Web */
@@ -1240,11 +1213,13 @@ svg {
   }
 
   @media screen and (min-resolution: 2dppx) {
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url(../images/hero-web-2x.jpg);
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero-web-2x.jpg);
+    }
   }
 
   /* Advantages-web */
